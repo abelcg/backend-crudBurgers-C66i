@@ -1,0 +1,23 @@
+{
+  "name": "backend-crudburgers",
+  "version": "1.0.0",
+  "description": "REST API para una hamburgueseria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelcg/backend-crudBurgers-C66i.git"
+  },
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "author": "Abel Córdoba González",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abelcg/backend-crudBurgers-C66i/issues"
+  },
+  "homepage": "https://github.com/abelcg/backend-crudBurgers-C66i#readme"
+}
