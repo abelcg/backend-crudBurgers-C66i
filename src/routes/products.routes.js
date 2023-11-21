@@ -7,6 +7,7 @@ import {
   updateProduct,
 } from '../controllers/products.controllers';
 import { check } from 'express-validator';
+import validateJWT from '../middlewares/validateJWT';
 import productValidate from '../middlewares/productValidations';
 //import productController from '../controllers/products.controllers';
 
@@ -19,7 +20,7 @@ router
   .route('/products')
   //.get(productController.showProduct)
   .get(showProduct)
-  .post([productValidate],createProduct)
+  .post([validateJWT, productValidate],createProduct)
   /* .post(
     [
       check('productName', 'El nombre del producto es obligatorio').notEmpty(),
@@ -42,7 +43,7 @@ router
 router
   .route('/products/:id')
   .get(getOne)
-  .put(updateProduct)
-  .delete(deleteProduct);
+  .put(validateJWT, updateProduct)
+  .delete(validateJWT, deleteProduct);
 
 export default router;
